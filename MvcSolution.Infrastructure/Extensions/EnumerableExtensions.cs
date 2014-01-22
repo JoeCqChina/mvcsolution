@@ -81,7 +81,7 @@ namespace MvcSolution.Infrastructure.Extensions
             var results = new List<T>();
             foreach (var item in source)
             {
-                if (!results.Any(resultItem => key(resultItem) == key(item)))
+                 if (!results.Any(resultItem => key(resultItem).Equals(key(item))))
                 {
                     results.Add(item);
                 }
